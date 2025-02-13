@@ -85,20 +85,24 @@
             border: 4px solid white;
         }
 
-        /* 🔹 LinkedIn Button */
-        .linkedin-button {
+        /* 🔹 Stylish Button */
+        .button {
             display: inline-block;
-            margin-top: 10px;
-        }
-
-        .linkedin-button img {
-            width: 35px;
-            height: 35px;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: #0073b1; /* LinkedIn Blue */
             transition: 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .linkedin-button img:hover {
-            opacity: 0.7;
+        .button:hover {
+            background: #005582;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         /* 🔹 Footer Styling */
@@ -124,7 +128,7 @@
     </div>
 
     <div class="container">
-        <!-- 🔹 About Me Section with Headshot + LinkedIn -->
+        <!-- 🔹 About Me Section with Headshot + LinkedIn Button -->
         <div class="section about-me">
             <h2>About Me</h2>
 
@@ -135,9 +139,7 @@
             <p>Welcome! I'm Seth, a finance professional passionate about AI, cooperative economics, and restructuring financial systems to benefit people. This is my space to share insights, ideas, and strategies for a better financial future.</p>
 
             <!-- 🔹 LinkedIn Button -->
-            <a href="https://www.linkedin.com/in/sethbryanroberts/" target="_blank" class="linkedin-button">
-                <img src="linkedin-blue-26@2x.png" alt="LinkedIn">
-            </a>
+            <a href="https://www.linkedin.com/in/sethbryanroberts/" target="_blank" class="button">Connect on LinkedIn</a>
         </div>
 
         <div class="section">
@@ -147,7 +149,8 @@
 
         <div class="section">
             <h2>Contact</h2>
-            <p>Interested in collaborating or discussing ideas? Reach out to me at <a href="mailto:hello@sethreworks.com" class="button">Contact Me</a></p>
+            <p>Interested in collaborating or discussing ideas? Reach out to me via email.</p>
+            <a href="mailto:hello@sethreworks.com" class="button">Contact Me</a>
         </div>
     </div>
 
@@ -157,6 +160,7 @@
 
 </body>
 </html>
+
 
 
 
