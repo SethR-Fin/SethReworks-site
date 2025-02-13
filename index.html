@@ -23,8 +23,8 @@
         .banner {
             position: relative;
             width: 100%;
-            height: 250px;
-            background: url('home-banner.jpg') center/cover no-repeat;
+            height: 300px;
+            background: url('banner.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,19 +36,18 @@
 
         /* 🔹 Navigation Bar */
         nav {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
-            position: absolute;
-            top: 0;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            position: relative;
             width: 100%;
-            z-index: 1000;
             display: flex;
             justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-weight: 600;
             transition: 0.3s;
         }
@@ -80,6 +79,27 @@
             display: inline-block;
         }
 
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: #0073e6;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cta-buttons a:hover {
+            background: #005bb5;
+        }
+
         /* 🔹 Footer Styling */
         footer {
             text-align: center;
@@ -94,24 +114,24 @@
 <body>
 
     <div class="banner">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="Projects.html">Projects</a>
-            <a href="about.html">About</a>
-        </nav>
         Welcome to Seth's Finance & AI Hub
     </div>
 
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="Projects.html">Projects</a>
+        <a href="about.html">About</a>
+    </nav>
+
     <div class="container">
         <div class="section">
-            <h2>About Me</h2>
-            <p>Welcome! I'm Seth, a finance professional passionate about AI, cooperative economics, and restructuring financial systems to benefit people.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Latest Updates</h2>
-            <p>Check out my latest blogs and projects exploring the intersection of AI, finance, and the future of economic cooperation.</p>
+            <h2>Explore More</h2>
+            <p>Dive into my latest insights, projects, and ideas on finance, AI, and cooperative economics.</p>
+            <div class="cta-buttons">
+                <a href="blog.html">Read the Blog</a>
+                <a href="about.html">Learn More About Me</a>
+            </div>
         </div>
     </div>
 
