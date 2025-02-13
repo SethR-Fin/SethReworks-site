@@ -29,6 +29,23 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* 🔹 Navigation Bar */
+        nav {
+            background: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
         /* 🔹 Banner Styling */
         .banner {
             position: relative;
@@ -68,43 +85,6 @@
             display: inline-block;
         }
 
-        /* 🔹 Circular Headshot Inside About Me */
-        .headshot-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .headshot {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 4px solid white;
-        }
-
-        /* 🔹 Stylish Button */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            color: white;
-            background: #0073b1; /* LinkedIn Blue */
-            transition: 0.3s;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .button:hover {
-            background: #005582;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
         /* 🔹 Footer Styling */
         footer {
             text-align: center;
@@ -114,7 +94,6 @@
             margin-top: 40px;
             font-size: 14px;
         }
-
     </style>
 </head>
 <body>
@@ -123,22 +102,22 @@
         Seth's Finance & AI Hub
     </header>
 
+    <!-- 🔹 Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+    </nav>
+
     <div class="banner">
         <img src="Banner.jpg" alt="Banner Image">
     </div>
 
     <div class="container">
-        <!-- 🔹 About Me Section with Headshot + LinkedIn Button -->
         <div class="section about-me">
             <h2>About Me</h2>
-
-            <div class="headshot-container">
-                <img src="headshot.jpeg" alt="Seth's Professional Headshot" class="headshot">
-            </div>
-
             <p>Welcome! I'm Seth, a finance professional passionate about AI, cooperative economics, and restructuring financial systems to benefit people. This is my space to share insights, ideas, and strategies for a better financial future.</p>
-
-            <!-- 🔹 LinkedIn Button -->
             <a href="https://www.linkedin.com/in/sethbryanroberts/" target="_blank" class="button">Connect on LinkedIn</a>
         </div>
 
@@ -160,6 +139,7 @@
 
 </body>
 </html>
+
 
 
 
