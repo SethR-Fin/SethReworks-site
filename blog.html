@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog | Seth's Finance & AI Hub</title>
+
+    <!-- 🔹 Google Font for a Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* 🔹 Header Styling */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 🔹 Navigation Bar */
+        nav {
+            background: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* 🔹 Main Container */
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .blog-post {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .blog-post h2 {
+            color: #222;
+            font-size: 22px;
+        }
+        .blog-post p {
+            color: #666;
+        }
+        .blog-post a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+
+        /* 🔹 Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Coming Soon</h1>
+
+    <header>
+        Seth's Finance & AI Hub
+    </header>
+
+    <!-- 🔹 Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="Projects.html">Projects</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="container">
+        <h2>Blog & Insights</h2>
+        <p>Explore articles on finance, AI, and cooperative economics.</p>
+
+        <!-- 🔹 Blog Post Previews -->
+        <div class="blog-post">
+            <h2>How AI is Revolutionizing Finance</h2>
+            <p>Artificial intelligence is transforming the financial industry by automating processes, enhancing data analysis, and improving decision-making...</p>
+            <a href="#">Read More</a>
+        </div>
+        
+        <div class="blog-post">
+            <h2>The Future of Cooperative Economics</h2>
+            <p>Cooperative models offer an alternative to traditional capitalism, allowing communities to take control of their financial future...</p>
+            <a href="#">Read More</a>
+        </div>
+        
+        <div class="blog-post">
+            <h2>Decentralized Finance (DeFi) Explained</h2>
+            <p>DeFi is disrupting traditional banking by providing open financial systems accessible to anyone with an internet connection...</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Seth's Finance & AI Hub | Built for the future
+    </footer>
+
 </body>
 </html>
+
