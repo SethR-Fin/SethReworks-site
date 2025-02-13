@@ -16,6 +16,7 @@
             background-color: #f4f4f4;
             color: #333;
             text-align: center;
+            scroll-behavior: smooth;
         }
 
         /* 🔹 Header Styling */
@@ -33,6 +34,11 @@
         nav {
             background: #333;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.3s ease;
         }
         nav a {
             color: white;
@@ -52,6 +58,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
         }
         .banner img {
             width: 85%;
@@ -71,6 +79,8 @@
             padding: 25px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards 0.5s;
         }
 
         .section {
@@ -85,6 +95,33 @@
             display: inline-block;
         }
 
+        /* 🔹 Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #004c99;
+        }
+
+        /* 🔹 Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* 🔹 Footer Styling */
         footer {
             text-align: center;
@@ -94,6 +131,7 @@
             margin-top: 40px;
             font-size: 14px;
         }
+
     </style>
 </head>
 <body>
@@ -139,6 +177,7 @@
 
 </body>
 </html>
+
 
 
 
