@@ -19,29 +19,28 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔹 Navigation Bar */
+/* 🔹 Navbar Styling Fix */
 nav {
-    background: #0073e6;
-    padding: 10px 0;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    background-color: #1a1a1a;
+    padding: 15px;
     text-align: center;
 }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-}
-nav ul li a:hover {
-    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* 🔹 Banner */
@@ -165,7 +164,7 @@ footer {
 	/* 🔹 Fix for Rotating Carousel Images */
 .carousel img {
     width: 100%; /* Ensures the image fills the container */
-    max-width: 800px; /* Adjust as needed */
+    max-width: 300px; /* Adjust as needed */
     height: auto; /* Keeps the aspect ratio */
     object-fit: cover;
     border-radius: 8px; /* Keeps a consistent design */
