@@ -1,0 +1,21 @@
+[
+    {
+        "title": "The Grid – A New Digital Society",
+        "date": "February 2024",
+        "image": "grid-blog.jpg",
+        "link": "blog-the-grid.html"
+    },
+    {
+        "title": "AI & The Future of Finance",
+        "date": "March 2024",
+        "image": "ai-finance.jpg",
+        "link": "blog-ai-finance.html"
+    },
+    {
+        "title": "Cooperative Economics & AI",
+        "date": "March 2024",
+        "image": "coop-ai.jpg",
+        "link": "blog-coop-ai.html"
+    }
+]
+
