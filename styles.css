@@ -162,24 +162,32 @@ footer {
         font-size: 20px;
     }
 	/* 🔹 Fix for Rotating Carousel Images */
-.carousel img {
-    width: 100%; /* Ensures the image fills the container */
-    max-width: 300px; /* Adjust as needed */
-    height: auto; /* Keeps the aspect ratio */
-    object-fit: cover;
-    border-radius: 8px; /* Keeps a consistent design */
-    display: block;
-    margin: auto;
-}
-/* 🔹 Ensures Carousel Container is Well-Proportioned */
+
+/* 🔹 Text-Based Carousel Fix */
 .carousel {
-    width: 100%;
+    width: 85%;
     max-width: 900px;
-    height: 400px; /* Adjust height as needed */
-    overflow: hidden;
-    position: relative;
-    margin: auto;
+    margin: 20px auto;
     text-align: center;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-item {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a1a;
+    background: #f4f4f4;
+    border-radius: 5px;
+    margin: 5px;
+}
+
 }
 
 /* 🔹 Ensures Buttons Don't Shift Layout */
