@@ -153,5 +153,30 @@ footer {
     h1, h2 {
         font-size: 20px;
     }
+    /* Ensure all images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Banner image adjustments */
+.banner img {
+    width: 100%;
+    max-height: 250px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Blog & project images */
+.blog-image, .project-image {
+    width: 100%;
+    max-width: 800px; /* Adjust for optimal display */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 }
 
