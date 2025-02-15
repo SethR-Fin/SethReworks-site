@@ -8,30 +8,26 @@
 </head>
 <body>
     <div class="banner">
-    <div class="banner-text">Welcome to Seth's Finance & AI Hub</div>
-</div>
+        <div class="banner-text">Welcome to Seth's Finance & AI Hub</div>
+    </div>
    	
     <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
 
     <!-- 🔹 Rotating Featured Content Section (With Images) -->
-   <div class="carousel">
-    <div class="carousel-content">
-        <div class="carousel-item">Latest Blog Post: <a href="blog.html">Read More</a></div>
-        <div class="carousel-item">Featured Project: <a href="projects.html">Learn More</a></div>
-        <div class="carousel-item">Explore Services: <a href="services.html">See Services</a></div>
-    </div>
-</div>
-
+    <div class="carousel">
+        <div class="carousel-content">
+            <div class="carousel-item active">Latest Blog Post: <a href="blog.html">Read More</a></div>
+            <div class="carousel-item">Featured Project: <a href="projects.html">Learn More</a></div>
+            <div class="carousel-item">Explore Services: <a href="services.html">See Services</a></div>
+        </div>
         <div class="navigation-arrows">
             <span class="nav-arrow" onclick="prevSlide()">&#10094;</span>
             <span class="nav-arrow" onclick="nextSlide()">&#10095;</span>
@@ -40,19 +36,19 @@
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
     </div>
 
     <script>
         let slideIndex = 0;
-        const slides = document.querySelectorAll('.featured-content');
+        const slides = document.querySelectorAll('.carousel-item');
         const dots = document.querySelectorAll('.dot');
 
         function showSlides(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === n) ? 'block' : 'none';
+            });
             dots.forEach(dot => dot.classList.remove('active'));
-            slides[n].classList.add('active');
             dots[n].classList.add('active');
         }
 
@@ -71,19 +67,22 @@
             showSlides(slideIndex);
         }
 
+        showSlides(slideIndex);
         setInterval(nextSlide, 5000);
     </script>
-	<div class="container">
+
+    <div class="container">
         <div class="section">
             <h2>Explore More</h2>
             <p>Dive into my latest insights, projects, and ideas on finance, AI, and cooperative economics.</p>
             <div class="cta-buttons">
-                <a href="blog.html">Read the Blog</a>
-                <a href="about.html">About me</a>
+                <a href="blog.html" class="button">Read the Blog</a>
+                <a href="about.html" class="button">About me</a>
             </div>
         </div>
     </div>
-	<footer>
+
+    <footer>
         &copy; 2024 Seth's Finance & AI Hub | Built for the future
     </footer>
 </body>

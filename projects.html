@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – Seth's Finance & AI Hub</title>
+    <link rel="stylesheet" href="styles.css">
+   </head>
+<body>
+	<div class="banner">
+    <div class="banner-text">Projects</div>
+</div>
+
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+
+
+    <div class="container">
+        <h1>Projects</h1>
+
+        <div class="project-card" onclick="toggleDetails('grid')">
+            <h2>The Grid – A Cooperative Digital Society</h2>
+            <p><strong>Revolutionizing governance, economy, and resource-sharing.</strong></p>
+            <div id="grid" class="project-details">
+                <p>The Grid is a decentralized, AI-driven cooperative society designed to empower communities and rethink economic structures.</p>
+                <ul>
+                    <li>Quadratic voting for fair governance</li>
+                    <li>Cooperative finance & community investment</li>
+                    <li>AI-powered decision-making & automation</li>
+                </ul>
+                <a href="contact.html" class="cta-button">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="toggleDetails('finance')">
+            <h2>Automation in Business Finance</h2>
+            <p><strong>Streamlining financial workflows using AI and automation.</strong></p>
+            <div id="finance" class="project-details">
+                <p>Using AI-driven solutions to optimize data processing, financial tracking, and strategic analysis for better efficiency.</p>
+                <ul>
+                    <li>Automating financial reporting & analysis</li>
+                    <li>Real-time data extraction & tracking</li>
+                    <li>Optimizing work-life balance with AI tools</li>
+                </ul>
+                <a href="contact.html" class="cta-button">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="toggleDetails('ai-governance')">
+            <h2>Ethically Harnessing AI in Governance</h2>
+            <p><strong>Exploring the future of AI-driven decision-making.</strong></p>
+            <div id="ai-governance" class="project-details">
+                <p>Developing safeguards and ethical frameworks to ensure AI contributes to fair and equitable governance.</p>
+                <ul>
+                    <li>AI-assisted quadratic voting models</li>
+                    <li>Transparent auditing of decentralized systems</li>
+                    <li>AI-driven optimization for resource allocation</li>
+                </ul>
+                <a href="contact.html" class="cta-button">Let's Talk</a>
+            </div>
+        </div>
+    </div>
+	<footer>
+        &copy; 2024 Seth's Finance & AI Hub | Built for the future
+    </footer>
+
+    <script>
+     function toggleDetails(id) {
+    var details = document.getElementById(id);
+    var allDetails = document.querySelectorAll('.project-details');
+
+    allDetails.forEach(function(div) {
+        if (div !== details) {
+            div.style.display = "none"; // Close other open details
+        }
+    });
+
+    if (details.style.display === "block") {
+        details.style.display = "none";
+    } else {
+        details.style.display = "block";
+    }
+}
+
+    </script>
+
+</body>
+</html>
+

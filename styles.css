@@ -124,6 +124,7 @@ footer {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
 /* 🔹 Mobile Optimization */
 @media (max-width: 768px) {
     .container {
@@ -186,6 +187,55 @@ footer {
     background: #f4f4f4;
     border-radius: 5px;
     margin: 5px;
+}
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card h3 {
+    margin: 0;
+    color: #0073e6;
+}
+
+.project-details {
+    display: none; /* Initially hidden */
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.project-card.expanded .project-details {
+    display: block;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #005bb5;
 }
 
 }
