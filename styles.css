@@ -87,7 +87,7 @@ nav ul li a {
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 /* 🔹 Buttons */
@@ -106,7 +106,7 @@ nav ul li a {
     background: #005bb5;
 }
 .cta-button {
-    display: block;
+    display: flex;
     width: 150px;
     margin: 10px auto;
     text-align: center;
