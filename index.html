@@ -21,13 +21,39 @@
         </ul>
     </nav>
 
-    <!-- 🔹 Rotating Featured Content Section (With Images) -->
     <div class="carousel">
         <div class="carousel-content">
-            <div class="carousel-item active">Latest Blog Post: <a href="blog.html">Read More</a></div>
-            <div class="carousel-item">Featured Project: <a href="projects.html">Learn More</a></div>
-            <div class="carousel-item">Explore Services: <a href="services.html">See Services</a></div>
+            <!-- 🔹 Blog Post Card -->
+            <div class="carousel-item active">
+                <div class="carousel-card">
+                    <img src="blog-thumbnail.jpg" alt="Latest Blog Post">
+                    <h3>Latest Blog Post</h3>
+                    <p>Explore insights on AI & Finance.</p>
+                    <a href="blog.html" class="carousel-btn">Read More</a>
+                </div>
+            </div>
+    
+            <!-- 🔹 Featured Project Card -->
+            <div class="carousel-item">
+                <div class="carousel-card">
+                    <img src="project-thumbnail.jpg" alt="Featured Project">
+                    <h3>Featured Project</h3>
+                    <p>Discover my latest work on AI-driven finance.</p>
+                    <a href="projects.html" class="carousel-btn">Learn More</a>
+                </div>
+            </div>
+    
+            <!-- 🔹 Services Highlight Card -->
+            <div class="carousel-item">
+                <div class="carousel-card">
+                    <img src="services-thumbnail.jpg" alt="Explore Services">
+                    <h3>Explore Services</h3>
+                    <p>See how I can help with AI & Finance.</p>
+                    <a href="services.html" class="carousel-btn">See Services</a>
+                </div>
+            </div>
         </div>
+    
         <div class="navigation-arrows">
             <span class="nav-arrow" onclick="prevSlide()">&#10094;</span>
             <span class="nav-arrow" onclick="nextSlide()">&#10095;</span>
@@ -38,6 +64,7 @@
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
+    
 
     <script>
         let slideIndex = 0;
