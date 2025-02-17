@@ -1,24 +1,32 @@
 [
     {
         "title": "The Grid – A New Digital Society",
-        "date": "February 2024",
+        "date": "February 2025",
         "image": "grid-blog.jpg",
         "summary": "Exploring the concept of a cooperative digital society powered by decentralization and AI",
         "link": "blog-the-grid.html"
     },
     {
         "title": "AI & The Future of Finance",
-        "date": "March 2024",
+        "date": "February 2025",
         "image": "ai-finance.jpg",
         "summary":"Exploring how artificial intelligence is revolutionizing the financial industry, from automation and fraud detection to personalized banking and AI-driven decision-making.",
         "link": "blog-ai-finance.html"
     },
     {
         "title": "Cooperative Economics & AI",
-        "date": "March 2024",
+        "date": "February 2025",
         "image": "coop-ai.jpg",
         "summary":"A deep dive into the principles of cooperative economics and how AI can enhance decentralized financial systems, fostering a more equitable and efficient economic future.",
         "link": "blog-coop-ai.html"
+    },
+    {
+          "title": "Post-Capitalism Economies: The Shift Beyond Profit-Driven Models",
+          "date": "February 2025",
+          "summary": "Exploring alternative economic models beyond capitalism, including cooperative economics, platform cooperativism, and AI-driven resource distribution.",
+          "image": "post-capitalism.jpg",
+          "link": "blog-post-capitalism.html"
+
     }
 ]
 
