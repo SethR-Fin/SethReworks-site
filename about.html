@@ -7,29 +7,25 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<script src="scripts.js"></script>
 <body>
 
     <!-- 🔹 Banner Section -->
     <div class="banner">
        <div class="banner-text">About</div>
     </div>
-
-    <!-- 🔹 Navigation Menu -->
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">Seth Reworks</a>
+        <nav>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="blog.html">Blog</a>
-                <a href="projects.html">Projects</a>
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <ul id="navMenu" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
         </nav>
     </header>
-    
 
     <!-- 🔹 Main Container -->
     <div class="container">
@@ -42,34 +38,30 @@
             <p>Welcome! I'm Seth, a finance professional passionate about AI, cooperative economics, and restructuring financial systems to benefit people. This is my space to share insights, ideas, and strategies for a better financial future.</p>
         </div>
 
-        <div class="section">
+        <div class="expertise-section">
             <h2>My Expertise</h2>
             <ul class="expertise-list">
-                <li><span class="checkmark">✔</span> Finance & AI Integration</li>
-                <li><span class="checkmark">✔</span> Cooperative Economic Models</li>
-                <li><span class="checkmark">✔</span> Strategic Financial Consulting</li>
-                <li><span class="checkmark">✔</span> Public Speaking & Thought Leadership</li>
+                <li><span class="checkmark">✔</span> Financial Strategy & Analysis</li>
+                <li><span class="checkmark">✔</span> AI in Business & Finance</li>
+                <li><span class="checkmark">✔</span> Cooperative Economic Systems</li>
+                <li><span class="checkmark">✔</span> Process Automation & Optimization</li>
+                <li><span class="checkmark">✔</span> Ethical AI Governance</li>
             </ul>
         </div>
+        
 
         <!-- 🔹 Button Container (Centered) -->
-        <div class="button-container">
-            <a href="https://www.linkedin.com/in/sethbryanroberts/" target="_blank" class="button">LinkedIn</a>
-            <a href="mailto:hello@sethreworks.com" class="button">Contact Me</a>
-        </div>
+        <div class="cta-container">
+            <a href="https://www.linkedin.com/in/sethbryanroberts/" target="_blank" class="cta-button">LinkedIn</a>
+            <a href="mailto:hello@sethreworks.com" class="cta-button">Contact Me</a>
+        </div>        
     </div>
 
     <!-- 🔹 Footer -->
     <footer>
         &copy; 2024 Seth's Finance & AI Hub | Built for the future
     </footer>
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.nav-links');
-            menu.classList.toggle('active');
-        }
-    </script>
-    
+
 </body>
 </html>
 

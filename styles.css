@@ -1,4 +1,4 @@
-/* 🔹 General Styles */
+/* 🔹 Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,187 +8,323 @@ body {
     text-align: center;
 }
 
-/* 🔹 Navigation Bar */
-.navbar {
+/* 🔹 Header */
+header {
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Default Nav Styling for Desktop */
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #1a1a1a;
     padding: 15px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        text-align: center;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+}
+
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0073e6;
+}
+
+/* 🔹 Mobile-Specific Styling */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* 🔹 Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; /* Only show on mobile */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* 🔹 Mobile Navigation Styling */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    /* 🔹 Show Hamburger Menu on Mobile */
+    .hamburger {
+        display: none; /* Hidden by default */
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 0px; /* Adjust vertical position */
+        left: 50%;
+        transform: translateX(-50%); /* Centers it */
+        z-index: 100;
+    }
+    /* Hide nav menu by default */
+#navMenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     z-index: 1000;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: 0.3s;
+/* Show nav menu when .show class is added */
+#navMenu.show {
+    display: block;
 }
 
-.navbar a:hover {
-    background: #0073e6;
-    border-radius: 5px;
-}
-
-/* 🔹 Mobile-Responsive Navigation */
+    
+/* 🔹 Hide Navigation by Default on Mobile */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
+/* Ensure menu is hidden by default */
+.nav-links {
+    display: none; /* Default: hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .navbar a {
-        display: block;
-        padding: 12px;
-        font-size: 16px;
+/* Show menu when toggled */
+.nav-links.show {
+    display: flex;
+}
+
+/* Adjust hamburger menu */
+.hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    z-index: 10000;
+}
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+/* Ensure the menu icon appears on small screens */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Ensure the nav bar stays on top */
+.nav-links {
+    z-index: 1000; /* Higher than other content */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 10px 0;
+}
+
+/* Push carousel down when nav is open */
+.nav-open .carousel-container {
+    margin-top: 150px; /* Adjust based on menu size */
+}
+
+/* Ensure nav menu expands over the carousel */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 10px 0;
+        z-index: 9999; /* Ensures it's above everything */
     }
 }
 
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none; /* Hide by default */
+    }
+    .nav-links.show {
+        display: flex; /* Show when toggled */
+    }
+}
+    nav ul li {
+        padding: 10px 0;
+    }
+}
 /* 🔹 Banner Styling */
 .banner {
     position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.banner img {
-    width: 85%;
-    max-width: 1000px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* 🔹 Carousel Container */
-.carousel {
-    width: 80%;
-    max-width: 900px;
-    margin: 30px auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-content {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    flex: 1;
+    height: 250px; /* Adjust as needed */
+    background: url('Banner.jpg') center/cover no-repeat; /* Make sure the file is named exactly 'Banner.jpg' */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-
-.carousel-card {
-    width: 80%;
-    max-width: 450px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.carousel-card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.navigation-arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.nav-arrow {
-    background: rgba(0, 0, 0, 0.5);
     color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 Banner Text Overlay */
+.banner-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+
+/* 🔹 Headshot */
+.headshot {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    font-size: 18px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
 }
 
-.nav-arrow:hover {
-    background: rgba(0, 0, 0, 0.7);
+/* 🔹 Main Content */
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
 }
 
-/* 🔹 Mobile Optimization for Carousel */
-@media (max-width: 768px) {
-    .carousel {
-        width: 95%;
-        max-width: 100%;
-        overflow: hidden;
-    }
+/* 🔹 Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.button:hover {
+    background: #005bb5;
+}
+.cta-container {
+    margin-top: 20px; /* Increases spacing between My Expertise section and buttons */
+    text-align: center; /* Ensures buttons remain centered */
+}
 
-    .carousel-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.cta-button {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding: 10px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin: 10px 5px; /* Adds spacing between multiple buttons */
+}
 
-    .carousel-item {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .carousel-card {
-        width: 90%;
-        max-width: 400px;
-        text-align: center;
-        padding: 15px;
-        background: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-
-    .carousel-card img {
-        width: 100%;
-        max-height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .navigation-arrows {
-        position: relative;
-        top: auto;
-        transform: none;
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .nav-arrow {
-        font-size: 20px;
-        padding: 5px 10px;
-    }
-
-    .dot-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-    }
+.cta-button:hover {
+    background: #005bb5;
 }
 
 /* 🔹 Footer */
@@ -200,5 +336,328 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
+/* 🔹 Blog Cards */
+.blog-card {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Makes content fit better on mobile */
+        padding: 15px;
+    }
+
+    .banner img {
+        width: 100%; /* Makes banner scale properly */
+        height: auto;
+    }
+
+    .headshot {
+        width: 120px; /* Slightly smaller headshot */
+        height: 120px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+	/* 🔹 Fix for Rotating Carousel Images */
+
+/* 🔹 Carousel Styling */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ensures it's not too wide on desktop */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 🔹 Carousel Content */
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+/* Adjust the carousel position when the menu expands */
+.carousel-container {
+    transition: margin-top 0.3s ease-in-out;
+}
+
+/* When the nav is open, push the carousel down */
+.nav-open .carousel-container {
+    margin-top: 150px; /* Adjust this value based on menu size */
+}
+
+/* 🔹 Individual Carousel Items */
+.carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🔹 Carousel Card */
+.carousel-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: auto;
+}
+
+/* 🔹 Carousel Images */
+.carousel-card img {
+    width: 100%;
+    max-width: 350px; /* Prevents images from getting too large */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 🔹 Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.nav-arrow:first-of-type {
+    left: 10px;
+}
+
+.nav-arrow:last-of-type {
+    right: 10px;
+}
+
+/* 🔹 Dots Navigation */
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: #0073e6;
+}
+
+/* 🔹 Responsive Styling for Mobile */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%;
+    }
+
+    .carousel-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .carousel-card img {
+        max-width: 280px;
+    }
+
+    .nav-arrow {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Provides spacing between the cards */
+    justify-content: center;
+    align-items: start; /* Keeps items aligned at the top */
+    padding: 20px;
+}
+
+}
+.click-indicator {
+    color: #0073e6;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+.project-thumbnail,
+.project-card img {
+    width: 100%; /* Ensures the image scales within its container */
+    max-width: 300px; /* Prevents it from getting too large */
+    height: auto; /* Keeps the aspect ratio */
+    max-height: 200px; /* Ensures images don’t get too tall */
+    object-fit: cover; /* Crops the image to fit the space while maintaining its aspect */
+    display: block;
+    margin: 0 auto 15px auto; /* Centers the image */
+    border-radius: 8px;
+}
+
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.project-card h2 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.click-indicator {
+    color: #0073e6;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project-details {
+    display: none;
+    padding-top: 10px;
+}
+
+.project-card.expanded .project-details {
+    display: block;
+}
+
+/* Expanding Card Effect */
+.project-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    margin: 0;
+    color: #0073e6;
+}
+
+.project-details {
+    display: none; /* Initially hidden */
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.project-card.expanded .project-details {
+    display: block;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #005bb5;
+}
+.services-thumbnail {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+/* 🔹 Ensures Buttons Don't Shift Layout */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.blog-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+.expertise-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0 auto 30px auto;
+    text-align: left; /* Align text properly */
+    display: inline-block; /* Makes sure content stays centered */
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    gap: 10px; /* Adds spacing between checkmark & text */
+    justify-content: flex-start; /* Aligns text with checkmarks */
+}
+
+.checkmark {
+    color: #0073e6; /* Matches theme */
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevents checkmark from resizing */
+}
+
 
 

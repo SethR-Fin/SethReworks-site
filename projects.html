@@ -5,153 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects – Seth's Finance & AI Hub</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .container {
-            width: 85%;
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        h1 {
-            text-align: center;
-            color: #0073e6;
-        }
-
-        .project-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-thumbnail {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #0073e6;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #005bb5;
-        }
-
-    </style>
-   </head>
+    <script src="scripts.js" defer></script>
+</head>
 <body>
-	<div class="banner">
-    <div class="banner-text">Projects</div>
-</div>
 
-<header>
-    <nav class="navbar">
-        <a href="index.html" class="logo">Seth Reworks</a>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="projects.html">Projects</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-</header>
+    <!-- 🔹 Banner -->
+    <div class="banner">
+        <div class="banner-text">Projects</div>
+    </div>
 
+    <!-- 🔹 Navigation -->
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul id="navMenu" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Projects Container -->
     <div class="container">
         <h1>Projects</h1>
 
-        <div class="project-card" onclick="toggleDetails('grid')">
-            <img src="project2.jpg" alt="The Grid" class="project-thumbnail">
-            <h2>The Grid – A Cooperative Digital Society</h2>
-            <p><strong>Revolutionizing governance, economy, and resource-sharing.</strong></p>
-            <div id="grid" class="project-details">
-                <p>The Grid is a decentralized, AI-driven cooperative society designed to empower communities and rethink economic structures.</p>
-                <ul>
-                    <li>Quadratic voting for fair governance</li>
-                    <li>Cooperative finance & community investment</li>
-                    <li>AI-powered decision-making & automation</li>
-                </ul>
-                <a href="mailto:hello@sethreworks.com" class="cta-button">Let's Talk</a>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="toggleDetails('grid')">
+                <img src="project2.jpg" alt="The Grid" class="project-thumbnail">
+                <h3>The Grid – A Cooperative Digital Society</h3>
+                <p>Revolutionizing governance, economy, and resource-sharing.</p>
+                <p class="click-indicator">Click to Expand</p>
+                <div id="grid" class="project-details">
+                    <p>The Grid is a decentralized, AI-driven cooperative society designed to empower communities and rethink economic structures.</p>
+                    <ul>
+                        <li>Quadratic voting for fair governance</li>
+                        <li>Cooperative finance & community investment</li>
+                        <li>AI-powered decision-making & automation</li>
+                    </ul>
+                    <a href="mailto:hello@sethreworks.com" class="project-btn">Let's Talk</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card" onclick="toggleDetails('finance')">
-            <img src="project3.jpg" alt="Business Automation" class="project-thumbnail">
-            <h2>Automation in Business Finance</h2>
-            <p><strong>Streamlining financial workflows using AI and automation.</strong></p>
-            <div id="finance" class="project-details">
-                <p>Using AI-driven solutions to optimize data processing, financial tracking, and strategic analysis for better efficiency.</p>
-                <ul>
-                    <li>Automating financial reporting & analysis</li>
-                    <li>Real-time data extraction & tracking</li>
-                    <li>Optimizing work-life balance with AI tools</li>
-                </ul>
-                <a href="mailto:hello@sethreworks.com" class="cta-button">Let's Talk</a>
+            <!-- Project 2 -->
+            <div class="project-card" onclick="toggleDetails('finance')">
+                <img src="project3.jpg" alt="Business Automation" class="project-thumbnail">
+                <h3>Automation in Business Finance</h3>
+                <p>Streamlining financial workflows using AI and automation.</p>
+                <p class="click-indicator">Click to Expand</p>
+
+                <div id="finance" class="project-details">
+                    <p>Using AI-driven solutions to optimize data processing, financial tracking, and strategic analysis for better efficiency.</p>
+                    <ul>
+                        <li>Automating financial reporting & analysis</li>
+                        <li>Real-time data extraction & tracking</li>
+                        <li>Optimizing work-life balance with AI tools</li>
+                    </ul>
+                    <a href="mailto:hello@sethreworks.com" class="project-btn">Let's Talk</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card" onclick="toggleDetails('ai-governance')">
-            <img src="project1.jpg" alt="AI Governance" class="project-thumbnail">
-            <h2>Ethically Harnessing AI in Governance</h2>
-            <p><strong>Exploring the future of AI-driven decision-making.</strong></p>
-            <div id="ai-governance" class="project-details">
-                <p>Developing safeguards and ethical frameworks to ensure AI contributes to fair and equitable governance.</p>
-                <ul>
-                    <li>AI-assisted quadratic voting models</li>
-                    <li>Transparent auditing of decentralized systems</li>
-                    <li>AI-driven optimization for resource allocation</li>
-                </ul>
-                <a href="mailto:hello@sethreworks.com" class="cta-button">Let's Talk</a>
+            <!-- Project 3 -->
+            <div class="project-card" onclick="toggleDetails('ai-governance')">
+                <img src="project1.jpg" alt="AI Governance" class="project-thumbnail">
+                <h3>Ethically Harnessing AI in Governance</h3>
+                <p>Exploring the future of AI-driven decision-making.</p>
+                <p class="click-indicator">Click to Expand</p>
+
+                <div id="ai-governance" class="project-details">
+                    <p>Developing safeguards and ethical frameworks to ensure AI contributes to fair and equitable governance.</p>
+                    <ul>
+                        <li>AI-assisted quadratic voting models</li>
+                        <li>Transparent auditing of decentralized systems</li>
+                        <li>AI-driven optimization for resource allocation</li>
+                    </ul>
+                    <a href="mailto:hello@sethreworks.com" class="project-btn">Let's Talk</a>
+                </div>
             </div>
         </div>
     </div>
-	<footer>
+
+    <!-- 🔹 Footer -->
+    <footer>
         &copy; 2024 Seth's Finance & AI Hub | Built for the future
     </footer>
-
-    <script>
-     function toggleDetails(id) {
-    var details = document.getElementById(id);
-    var allDetails = document.querySelectorAll('.project-details');
-
-    allDetails.forEach(function(div) {
-        if (div !== details) {
-            div.style.display = "none"; // Close other open details
-        }
-    });
-
-    if (details.style.display === "block") {
-        details.style.display = "none";
-    } else {
-        details.style.display = "block";
-    }
-}
-
-    </script>
-<script>
-    function toggleMenu() {
-        var menu = document.querySelector('.nav-links');
-        menu.classList.toggle('active');
-    }
-</script>
-
 </body>
 </html>
+
 
